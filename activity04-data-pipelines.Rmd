@@ -251,7 +251,8 @@ Name the code chunk `stem_low_salaries`.
 ```{r stem_low_salaries}
 college_recent_grads %>% 
   filter(major_category %in% stem_categories, median<36000) %>% 
-  select(major, p25th, median, p75th)
+  arrange(major_category) %>% 
+  select(major_category, major, p25th, median, p75th)
 ```
 
 Discuss your output as it relates to the research question.

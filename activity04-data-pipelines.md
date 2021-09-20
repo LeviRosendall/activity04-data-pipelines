@@ -363,22 +363,23 @@ variables `major`, `p25th`, `median`, and `p75th` Name the code chunk
 ``` r
 college_recent_grads %>% 
   filter(major_category %in% stem_categories, median<36000) %>% 
-  select(major, p25th, median, p75th)
+  arrange(major_category) %>% 
+  select(major_category, major, p25th, median, p75th)
 ```
 
-    ## # A tibble: 10 x 4
-    ##    major                                 p25th median p75th
-    ##    <chr>                                 <dbl>  <dbl> <dbl>
-    ##  1 Environmental Science                 25000  35600 40200
-    ##  2 Multi-Disciplinary Or General Science 24000  35000 50000
-    ##  3 Physiology                            20000  35000 50000
-    ##  4 Communication Technologies            25000  35000 45000
-    ##  5 Neuroscience                          30000  35000 44000
-    ##  6 Atmospheric Sciences And Meteorology  28000  35000 50000
-    ##  7 Miscellaneous Biology                 23000  33500 48000
-    ##  8 Biology                               24000  33400 45000
-    ##  9 Ecology                               23000  33000 42000
-    ## 10 Zoology                               20000  26000 39000
+    ## # A tibble: 10 x 5
+    ##    major_category          major                              p25th median p75th
+    ##    <chr>                   <chr>                              <dbl>  <dbl> <dbl>
+    ##  1 Biology & Life Science  Environmental Science              25000  35600 40200
+    ##  2 Biology & Life Science  Physiology                         20000  35000 50000
+    ##  3 Biology & Life Science  Neuroscience                       30000  35000 44000
+    ##  4 Biology & Life Science  Miscellaneous Biology              23000  33500 48000
+    ##  5 Biology & Life Science  Biology                            24000  33400 45000
+    ##  6 Biology & Life Science  Ecology                            23000  33000 42000
+    ##  7 Biology & Life Science  Zoology                            20000  26000 39000
+    ##  8 Computers & Mathematics Communication Technologies         25000  35000 45000
+    ##  9 Physical Sciences       Multi-Disciplinary Or General Sci… 24000  35000 50000
+    ## 10 Physical Sciences       Atmospheric Sciences And Meteorol… 28000  35000 50000
 
 Discuss your output as it relates to the research question.
 
