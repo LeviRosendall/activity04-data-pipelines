@@ -385,7 +385,7 @@ Discuss your output as it relates to the research question.
 
 **Response**: There are several STEM Majors that have median salaries
 under 36,000. They all appear to have to do with the health and
-environment.
+environment, although a few differ from this trend.
 
 ![](README-img/noun_pause.png) **(Final) Planned Pause Point**: If you
 have any questions, contact your instructor. Otherwise feel free to
